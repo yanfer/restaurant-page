@@ -1,0 +1,135 @@
+/* Common Navigation styles - estilos comunes de navegacion */
+.navigation-wrapper {
+    height: 190px;
+    background-color: #11122b;
+    color: #cbcbcb;
+    /* flexbox container (esto es un contenedor flexbox) */
+    display: flex;
+    /* Separa los elementos de la clase a su maximo potencial lado a lado con space-between
+    con space-around de igual solo que tambien los distancia de los costados */
+    justify-content: space-between;
+    /* Si esta justify-content entonces los separa en el centro de arriba a abajo dentro del flexbox
+    tambien se puede usar flex-start o flex-end dentro de aling-items */
+    align-items: center;
+    /* Es rellenar y da relleno para todos los lados, por eso se hace mas ancho y a la vez despega de los costados
+    padding: 100px; */
+    /* tambien se puede rellenar por separdo
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+    padding-right: 100px; */
+   /*  O TAMBIEN SE PUEDE RELLENAR EN EL MISMO PADDING SIGUIENDO LAS MANECILLAS DEL RELOJ
+    padding: 60px 100px 60px 100px; */
+    /* Pero la mejor solucion es que si se le da solo 2 opciones CSS entiende que el primero es
+    para arriba y abajo y el segundo es para los lados */
+    padding: 60px 100px;
+}
+
+
+/* Columna Izquierda */
+.navigation-wrapper > .left-column{
+    display: flex;
+    align-items: center;
+
+}
+.navigation-wrapper > .left-column > .contact-icon{
+    margin-right: 15px;
+}
+.navigation-wrapper > .left-column > .contact-icon i {
+    font-size: 2em;
+}
+
+/* fr son las cuadriculas si ponemos otro al lado de 1fr entonces le estamos diciendo que abra otra columna 
+y separara el texto en 2, y mientras mas numeros le pongamos a cada fr mas espacio tomara que el otro*/
+.left-column > .contact-hours-wrapper {
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 10px;
+}
+
+.left-column > .contact-hours-wrapper > .hours {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #858585;
+    font-size: 0.8em;
+}
+
+
+/* columna central */
+.navigation-wrapper > .center-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 42px;
+    width: 500px;
+}
+.navigation-wrapper > .center-column > .banner-image {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-wrapper> .center-column> .banner-image img{
+    width: 216px;
+    height: 100%;
+}
+
+.links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links-wrapper > .nav-link{
+    width: 70px;
+    text-align: center;
+}
+
+.links-wrapper > .nav-link a {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #cbcbcb;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.links-wrapper > .nav-link a:hover {
+    color: #cea135;
+    letter-spacing: 2px;
+} 
+
+
+/* Columna Derecha */
+
+.navigation-wrapper > .right-column {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-wrapper > .right-column > .address-wrapper {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: right;
+}
+
+.navigation-wrapper > .right-column > .address-wrapper a {
+    color: #858585;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.5s;
+
+}
+
+.navigation-wrapper > .right-column > .address-wrapper a:hover {
+    color: #cea135;
+    
+}
+
+.navigation-wrapper > .right-column > .contact-icon {
+margin-left: 15px;
+font-size: 2em;
+}
+
+.navigation-wrapper > .right-column > .contact-icon a {
+    color: #cbcbcb;
+    transition: 0.5s;
+}
+
+.navigation-wrapper > .right-column > .contact-icon a:hover {
+    color: #cea135;
+}
